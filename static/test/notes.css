@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #c0a89b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .navbar-brand .logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+  }
+
+  
+
+.search-form {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+    padding-left: 100px;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    width: 60%;
+    margin-right: 5px;
+    background-color: #dcc3b6;
+}
+.search-input::placeholder{
+    color:black;
+}
+
+  .search-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8c7569;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .profile-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .profile-icon:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 0;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  } 
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+  h1{
+    padding: 100px;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  h5{
+    padding-bottom: 30px;
+  }
+
+  .card {
+    width:200px;
+    border-radius: 8px;
+    border:none;
+
+  }
+
+  .card-title {
+    background-color: #8c7569;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+
+  }
+  
+  .box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    display: none;
+    backdrop-filter: blur(5px);
+  }
+  
+  body.blur .overlay {
+    display: block;
+  }
+  
+  .box.opened {
+    opacity: 1;
+    display: block;
+  }
+  
+  .box input,
+  .box textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .publish-button {
+    background-color: #8c7569;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+.noteCard {
+  margin: 50px;
+  width: calc(33.33% - 100px);
+}
+
+.card-body {
+  border: 2px solid brown;
+  border-radius: 20px;
+  width:100%;
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .noteCard {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .noteCard {
+    width: calc(100% - 20px);
+  }
+}
