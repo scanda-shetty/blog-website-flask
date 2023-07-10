@@ -5,6 +5,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
+
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
 
@@ -69,7 +70,7 @@ def login():
 @login_required
 def dashboard():
     username = current_user.username
-    response = make_response(render_template('dashboard.html', username=username)) #response is used to delete cache of site after logout
+    response = make_response(render_template('blog.html', username=username)) #response is used to delete cache of site after logout
     response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0'
     return response
 
